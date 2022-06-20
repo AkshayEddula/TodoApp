@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
 @import "main.css";
+@import "todo.css";
 
 $background-color:#d0a65a;
 $nav-bk:#F5C6AA;
@@ -13,15 +14,18 @@ html {
 }
 
 body {
-    background: $background-color;
     margin: 0;
+}
+
+.top-section {
+    background-color: $background-color;
 }
 
 
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 40px 30px;
     .nav-mobile {
         display: none;
     }

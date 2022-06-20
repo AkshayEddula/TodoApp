@@ -1,0 +1,70 @@
+.section2 {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  font-family: "Rubik", sans-serif;
+  margin: 60px;
+  padding: 30px;
+  background: #fff;
+  color: blue;
+}
+.section2 .text-enter h2 {
+  margin: 0;
+  margin-top: 25px;
+  padding-bottom: 10px;
+}
+.section2 .text-enter input {
+  color: black;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px;
+  width: 80%;
+  height: 50px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.section2 .btn {
+  margin-top: 25px;
+  margin-left: 20px;
+}
+.section2 .btn button {
+  cursor: pointer;
+  padding: 20px 40px;
+  background-color: blue;
+  color: white;
+  border: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: all ease 0.7s;
+}
+.section2 .btn button:hover {
+  transform: scale(1.1);
+  background-color: rgb(64, 64, 104);
+}
+
+.section2 .bg-l {
+  width: 100%;
+}
+
+.section2 .bg-l h1 {
+  width: 100%;
+}
+.section2 .bg-l h1 span {
+  color: #855ab7;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 480px) {
+  .section2 {
+    display: grid;
+    row-gap: 20px;
+    grid-template-columns: 1fr;
+    margin: 0px;
+  }
+  .section2 .btn {
+    margin-left: 0;
+  }
+}/*# sourceMappingURL=todo.css.map */

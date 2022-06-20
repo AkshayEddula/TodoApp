@@ -2,20 +2,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
 @import "main.css";
+@import "todo.css";
 html {
   font-family: "googleapis", sans-serif;
   box-sizing: border-box;
 }
 
 body {
-  background: #d0a65a;
   margin: 0;
+}
+
+.top-section {
+  background-color: #d0a65a;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 40px 30px;
 }
 nav .nav-mobile {
   display: none;

@@ -13,6 +13,7 @@
   font-family: "Rubik", sans-serif;
   font-weight: 600;
   color: blue;
+  margin-bottom: 20px;
   -webkit-animation: fall 0.7s;
           animation: fall 0.7s;
 }
@@ -57,17 +58,22 @@
   }
 }
 @media only screen and (max-width: 480px) {
+  .top-section {
+    height: 900px;
+  }
+
   .section1 {
     margin: auto;
     display: flex;
     flex-direction: column;
     padding: 20px 20px;
     align-items: center;
+    justify-content: space-between;
   }
 
   .section1 h1 {
     position: relative;
-    width: 80%;
+    width: 90%;
     font-size: 2.5rem;
     font-family: "Rubik", sans-serif;
     font-weight: 600;
@@ -77,29 +83,47 @@
     margin: 0;
   }
 
+  @-webkit-keyframes fall {
+    0% {
+      right: 500px;
+    }
+    100% {
+      right: 0;
+    }
+  }
+
+  @keyframes fall {
+    0% {
+      right: 500px;
+    }
+    100% {
+      right: 0;
+    }
+  }
   .section1 img {
-    transform: scale(0.5);
     position: absolute;
+    top: 60%;
+    left: -40%;
+    transform: scale(0.5);
     -webkit-animation: fall2 0.9s;
             animation: fall2 0.9s;
-    bottom: -90px;
   }
 
   @-webkit-keyframes fall2 {
     0% {
-      bottom: 900px;
+      left: 210px;
     }
     100% {
-      bottom: -90px;
+      left: -40%;
     }
   }
 
   @keyframes fall2 {
     0% {
-      bottom: 900px;
+      left: 210px;
     }
     100% {
-      bottom: -90px;
+      left: -40%;
     }
   }
 }/*# sourceMappingURL=main.css.map */
