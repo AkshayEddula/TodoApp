@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
 @import "main.css";
 @import "todo.css";
+@import "section.css";
 html {
   font-family: "googleapis", sans-serif;
   box-sizing: border-box;
