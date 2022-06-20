@@ -1,6 +1,11 @@
 // Font added
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import "main.css";
+
+$background-color:#d0a65a;
+$nav-bk:#F5C6AA;
 
 html {
     font-family: 'googleapis',sans-serif;
@@ -8,7 +13,7 @@ html {
 }
 
 body {
-    background: #E7AB79;
+    background: $background-color;
     margin: 0;
 }
 
@@ -29,12 +34,15 @@ nav {
         border-radius: 50%;
         width: 70px;
         height: 70px;
-        margin-right: 10px;
+        margin-right: 20px;
     }
 
     .logo h1 {
+        position: relative;
+        color: purple;
         cursor: pointer;
         font-family: 'Rubik',sans-serif;
+        animation: fallin 0.8s;
     }
 
     .nav-links {
@@ -49,12 +57,24 @@ nav {
             list-style: none;
             padding-left: 100px;
             a {
+                position: relative;
                 font-size: 18px;
-                color: black;
+                color: purple;
                 font-family: 'Rubik',sans-serif;
                 font-weight: 600;
                 text-decoration: none;
+                transition: all ease-in 0.5s;
+                animation: fallin 1.2s;
             }
+
+        @keyframes fallin {
+            0% {
+                bottom: 300px;
+            }
+            100% {
+                bottom: 0;
+            }
+        }
         }
         a::after{
             opacity: 0;
@@ -65,7 +85,8 @@ nav {
             100%{opacity: 1;}
         }
         a:hover{
-            color: #A084CF;
+            color: rgb(128, 103, 128);
+            font-size: 19px;
         }
         a:hover::after {
             display: block;
@@ -74,7 +95,7 @@ nav {
             background: #B25068;
             width: 100%;
             border-radius: 4px;
-            height: 3px;
+            height: 2px;
         }
     }
 
@@ -91,10 +112,10 @@ nav {
             display: none;
         }
 
-
         .nav-links {
+            z-index: 10;
             display: none;
-            background-color: #774360;
+            background-color: $nav-bk;
             height: 100%;
             width: 50%;
             position: absolute;
@@ -106,6 +127,16 @@ nav {
                 margin-left: 70%;
                 padding: 20px 10px;
             }
+            animation: fadein 0.5s;
+        }
+        @keyframes fadein {
+            0%{opacity: 0;}
+            100%{opacity: 1;}
+        }
+
+        @keyframes fadeaway {
+            0%{opacity: 1;}
+            100%{opacity: 0;}
         }
 
         .nav-links ul {
@@ -122,7 +153,7 @@ nav {
         }
 
         .nav-links ul li a {
-            color: white;
+            color: purple;
         }
 
         .nav-links ul  a:hover {
