@@ -1,0 +1,140 @@
+// Font added
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600;800&display=swap');
+
+html {
+    font-family: 'googleapis',sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #E7AB79;
+    margin: 0;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    .nav-mobile {
+        display: none;
+    }
+    .logo{
+        display: flex;
+        align-items: flex-start;
+    }
+    .logo img{
+        cursor: pointer;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        margin-right: 10px;
+    }
+
+    .logo h1 {
+        cursor: pointer;
+        font-family: 'Rubik',sans-serif;
+    }
+
+    .nav-links {
+        margin-right: 40px;
+        img{
+            display: none;
+        }
+    }
+    .nav-links ul{
+        display: flex;
+        li {
+            list-style: none;
+            padding-left: 100px;
+            a {
+                font-size: 18px;
+                color: black;
+                font-family: 'Rubik',sans-serif;
+                font-weight: 600;
+                text-decoration: none;
+            }
+        }
+        a::after{
+            opacity: 0;
+            animation: fadein 0.7s;
+        }
+        @keyframes fadein {
+            0%{opacity: 0;}
+            100%{opacity: 1;}
+        }
+        a:hover{
+            color: #A084CF;
+        }
+        a:hover::after {
+            display: block;
+            content: '';
+            opacity: 1;
+            background: #B25068;
+            width: 100%;
+            border-radius: 4px;
+            height: 3px;
+        }
+    }
+
+}
+
+@media only screen and (max-width:480px){
+    nav{
+        overflow: hidden;
+        .nav-mobile {
+            display: block;
+        }
+
+        #show {
+            display: none;
+        }
+
+
+        .nav-links {
+            display: none;
+            background-color: #774360;
+            height: 100%;
+            width: 50%;
+            position: absolute;
+            margin-right: 0;
+            top: 0;
+            right: 0;
+            img{
+                display: block;
+                margin-left: 70%;
+                padding: 20px 10px;
+            }
+        }
+
+        .nav-links ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items:flex-start;
+            padding-top: 150px;
+        }
+
+        .nav-links ul li {
+            padding-left: 0;
+            padding-bottom: 50px;
+        }
+
+        .nav-links ul li a {
+            color: white;
+        }
+
+        .nav-links ul  a:hover {
+            color: #A084CF;
+        }
+
+        .nav-links ul  a:hover::after{
+            display: none;
+        }
+    
+    
+    }
+
+    
+}
