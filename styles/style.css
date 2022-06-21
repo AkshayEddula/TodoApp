@@ -4,6 +4,7 @@
 @import "main.css";
 @import "todo.css";
 @import "section.css";
+@import "footer.css";
 html {
   font-family: "googleapis", sans-serif;
   box-sizing: border-box;
@@ -64,7 +65,7 @@ nav .nav-links ul li a {
   font-family: "Rubik", sans-serif;
   font-weight: 600;
   text-decoration: none;
-  transition: all ease-in 0.5s;
+  transition: all ease-in 0.2s;
   -webkit-animation: fallin 1.2s;
           animation: fallin 1.2s;
 }
@@ -86,8 +87,8 @@ nav .nav-links ul li a {
 }
 nav .nav-links ul a::after {
   opacity: 0;
-  -webkit-animation: fadein 0.7s;
-          animation: fadein 0.7s;
+  -webkit-animation: fadein 0.3s;
+          animation: fadein 0.3s;
 }
 @-webkit-keyframes fadein {
   0% {
@@ -139,29 +140,29 @@ nav .nav-links ul a:hover::after {
     margin-right: 0;
     top: 0;
     right: 0;
-    -webkit-animation: fadein 0.5s;
-            animation: fadein 0.5s;
+    -webkit-animation: moveleft 0.7s;
+            animation: moveleft 0.7s;
+  }
+  @-webkit-keyframes moveleft {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 50%;
+    }
+  }
+  @keyframes moveleft {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 50%;
+    }
   }
   nav .nav-links img {
     display: block;
     margin-left: 70%;
     padding: 20px 10px;
-  }
-  @-webkit-keyframes fadein {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @keyframes fadein {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
   }
   @-webkit-keyframes fadeaway {
     0% {
@@ -192,6 +193,25 @@ nav .nav-links ul a:hover::after {
   }
   nav .nav-links ul li a {
     color: purple;
+    -webkit-animation: moveleft2 1.5s;
+            animation: moveleft2 1.5s;
+    position: relative;
+  }
+  @-webkit-keyframes moveleft2 {
+    0% {
+      left: 200px;
+    }
+    100% {
+      left: 0;
+    }
+  }
+  @keyframes moveleft2 {
+    0% {
+      left: 200px;
+    }
+    100% {
+      left: 0;
+    }
   }
   nav .nav-links ul a:hover {
     color: #A084CF;

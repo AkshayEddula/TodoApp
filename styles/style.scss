@@ -5,6 +5,7 @@
 @import "main.css";
 @import "todo.css";
 @import "section.css";
+@import "footer.css";
 
 $background-color:#d0a65a;
 $nav-bk:#F5C6AA;
@@ -68,7 +69,7 @@ nav {
                 font-family: 'Rubik',sans-serif;
                 font-weight: 600;
                 text-decoration: none;
-                transition: all ease-in 0.5s;
+                transition: all ease-in 0.2s;
                 animation: fallin 1.2s;
             }
 
@@ -83,7 +84,7 @@ nav {
         }
         a::after{
             opacity: 0;
-            animation: fadein 0.7s;
+            animation: fadein 0.3s;
         }
         @keyframes fadein {
             0%{opacity: 0;}
@@ -127,16 +128,20 @@ nav {
             margin-right: 0;
             top: 0;
             right: 0;
+            animation: moveleft 0.7s ;
+            @keyframes moveleft {
+                0%{
+                    width: 0%;
+                }
+                100%{
+                    width: 50%;
+                }
+            }
             img{
                 display: block;
                 margin-left: 70%;
                 padding: 20px 10px;
             }
-            animation: fadein 0.5s;
-        }
-        @keyframes fadein {
-            0%{opacity: 0;}
-            100%{opacity: 1;}
         }
 
         @keyframes fadeaway {
@@ -159,8 +164,17 @@ nav {
 
         .nav-links ul li a {
             color: purple;
+            animation: moveleft2 1.5s;
+            position: relative;
         }
-
+        @keyframes moveleft2 {
+            0%{
+                left: 200px;
+            }
+            100%{
+                left: 0;
+            }
+        }
         .nav-links ul  a:hover {
             color: #A084CF;
         }
